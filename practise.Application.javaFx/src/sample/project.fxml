@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" vgap="1.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.20001220703125" minWidth="0.5999877929687507" prefWidth="0.5999877929687507" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.20001220703125" minWidth="10.0" prefWidth="176.60001220703128" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.80003662109374" minWidth="10.0" prefWidth="300.80003662109374" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.99993896484375" minWidth="10.0" prefWidth="129.99993896484375" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="64.4000244140625" minWidth="10.0" prefWidth="10.00006103515625" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="253.4" minHeight="8.199999904632563" prefHeight="8.199999904632563" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="341.00000009536745" minHeight="10.0" prefHeight="259.8000122070313" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="127.00000610351563" minHeight="10.0" prefHeight="56.59996337890624" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="118.19998779296878" minHeight="10.0" prefHeight="87.00003662109378" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ProgressBar fx:id="taskProgress" opacity="0.7" prefHeight="18.0" prefWidth="282.0" progress="0.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <TextField fx:id="taskTextField" opacity="0.7" prefHeight="17.0" prefWidth="282.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <TableView fx:id="taskTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Priority" />
+            <TableColumn prefWidth="400.0" text="Description" />
+            <TableColumn minWidth="0.0" prefWidth="120.800048828125" text="Progress" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="taskCombox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="taskAddButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" text="Add" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <children>
+            <Label text="Progress" />
+            <Spinner fx:id="taskSpinner" editable="true" />
+            <CheckBox fx:id="taskCheckbox" mnemonicParsing="false" text="Completed" />
+         </children>
+      </HBox>
+      <Button fx:id="taskCancelButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" text="Cancel" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+   </children>
+</GridPane>

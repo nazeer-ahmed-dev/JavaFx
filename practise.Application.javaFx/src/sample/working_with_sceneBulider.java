@@ -13,9 +13,9 @@ public class working_with_sceneBulider extends Application{
     @Override
     public void start(Stage stage) throws Exception
         {
-            Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("project.fxml"));
             stage.setTitle("HeLlo world");
-            stage.setScene(new Scene(root,300,275));
+            stage.setScene(new Scene(root,600,400));
             stage.show();
         }
 }
