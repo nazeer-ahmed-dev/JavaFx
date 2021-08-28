@@ -24,6 +24,28 @@ public class task {
         readOnlyBooleanWrapper.set(false);
         System.out.println(readOnlyBooleanProperty.get());
 
+        // uni directional binding
+        SimpleStringProperty lastNameProp = new SimpleStringProperty();
+        SimpleStringProperty sunNameProp = new SimpleStringProperty();
+        sunNameProp.bind(lastNameProp); // uni directionaly binding
+
+        lastNameProp.set("Ahmed");
+       // sunNameProp.set("hh"); error : bound value can not be set
+        System.out.println(sunNameProp.get());
+
+        //Bi-directional binding
+        SimpleStringProperty lastNameProp1 = new SimpleStringProperty();
+        SimpleStringProperty sunNameProp1 = new SimpleStringProperty();
+        sunNameProp1.bindBidirectional(lastNameProp1);
+        lastNameProp1.set("a");
+        sunNameProp1.set("b");
+
+        System.out.println(lastNameProp1); // output : b
+        System.out.println(sunNameProp1);  // output : b
+
+
+
+
 
     }
 

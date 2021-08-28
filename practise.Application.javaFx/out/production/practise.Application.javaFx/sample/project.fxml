@@ -33,9 +33,9 @@
       <TextField fx:id="taskTextField" opacity="0.7" prefHeight="17.0" prefWidth="282.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
       <TableView fx:id="taskTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
          <columns>
-            <TableColumn prefWidth="75.0" text="Priority" />
-            <TableColumn prefWidth="400.0" text="Description" />
-            <TableColumn minWidth="0.0" prefWidth="120.800048828125" text="Progress" />
+            <TableColumn fx:id="priorityColumn" prefWidth="75.0" text="Priority" />
+            <TableColumn  fx:id="descriptionColumn" prefWidth="400.0" text="Description" />
+            <TableColumn fx:id="progressColumn" minWidth="0.0" prefWidth="120.800048828125" text="Progress" />
          </columns>
       </TableView>
       <ComboBox fx:id="taskCombox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
